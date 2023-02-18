@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="86.676">
+    <testcase classname="Validate the Search Cars page is working." name="Validate the Search Cars Page" time="85.753">
+        <failure message="expected [Bmw 1 Series Under 1000 for Sale Central Coast NSW | carsguide] but found [Bmw 5 Series Under 1000 for Sale Central Coast NSW | carsguide]" type="java.lang.AssertionError"><![CDATA[Given I am on the Home Page "https://www.carsguide.com.au/" of CarsGuide Website.passed
+When I move to CarsGuide Menu...............................................passed
+And Click on "Search Cars"link..............................................passed
+And Select Carbrand as "BMW" from AnyMake dropdown..........................passed
+And Select CarModel as "1 Series" from AnyModel dropdown....................passed
+And Select location as "NSW - Central Coast" from AnyLocation dropdown......passed
+And Select price as "$1,000" from price dropdown............................passed
+And Click on Find_My_Next_Car button........................................passed
+Then Searched cars should be displayed......................................passed
+And the page title should be "Bmw 5 Series Under 1000 for Sale Central Coast NSW | carsguide".failed
+
+StackTrace:
+java.lang.AssertionError: expected [Bmw 1 Series Under 1000 for Sale Central Coast NSW | carsguide] but found [Bmw 5 Series Under 1000 for Sale Central Coast NSW | carsguide]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+	at org.testng.Assert.assertEquals(Assert.java:131)
+	at org.testng.Assert.assertEquals(Assert.java:655)
+	at org.testng.Assert.assertEquals(Assert.java:665)
+	at steps.SeachCarsSteps.the_page_title_should_be(SeachCarsSteps.java:75)
+	at ✽.the page title should be "Bmw 5 Series Under 1000 for Sale Central Coast NSW | carsguide"(file:///D:/Sowdhama/Framework/CucumberwithPageObject/src/test/resources/features/SearchCares.feature:19)
+]]></failure>
+    </testcase>
+</testsuite>
